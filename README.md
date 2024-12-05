@@ -6,7 +6,7 @@ Automated Web Testing with JavaScript and Playwright: https://www.udemy.com/cour
 RESOURCES
 The Shopping Store Website runs from the following file:
 
-- shopping-store-mac-amd64
+- shopping-store-mac-arm64
 
   > go to where it's been downloaded, or moved to if moved from the download folder
   > double click on it
@@ -15,15 +15,11 @@ The Shopping Store Website runs from the following file:
   - to run from the terminal (use mac terminal) for zsh (the shell I use), follow this instruction:
     "Once your script is saved, you will need to make it executable by running the command “chmod +x [scriptname]” in the terminal. To run the script, you can use the terminal command “./[scriptname]”"
 
-  
 
-  - WORK mac:
-    > chmod +x shopping-store-mac-arm64
-    > ~ /Users/gerry.waterston/Learning/Playwright/Udemy-Playwright/code/udemy_awt_js_pw/./shopping-store-mac-arm64
 
-  - PERSONAL mac:
+  - PERSONAL mac - M3 chip:
     > chmod +x shopping-store-mac-amd64
-    > ~ /Users/gerrywaterston/Learning/Playwright/Udemy-Playwright/code/udemy_awt_js_pw/./shopping-store-mac-amd64
+    > ~ /Users/gerrywaterston/Learning/Playwright/Udemy-Playwright/code/udemy_awt_js_pw/./shopping-store-mac-arm64
 
 WEBSITE URL:
 
