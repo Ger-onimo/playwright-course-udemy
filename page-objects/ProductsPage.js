@@ -23,7 +23,8 @@ export class ProductsPage {
     // move this into the constructor: const addButtons = this.page.locator('[data-qa="product-button"]')
     await specificAddButton.waitFor()
     await expect(specificAddButton).toHaveText("Add to Basket")
-    // the basket count method is now called from the Navigation class
+    // the basket count method is now called from the Navigation class.
+    // A new instance of the Nvaigation class is created first:
     const navigation = new Navigation(this.page)
     const basketCountBeforeAdding = await navigation.getBasketCount()
     await specificAddButton.click()
