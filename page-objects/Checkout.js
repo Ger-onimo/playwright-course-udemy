@@ -19,7 +19,7 @@ export class Checkout {
       const withoutDollarSign = element.replace("$", "")
       return parseInt(withoutDollarSign, 10)
     })
-    const smallestPrice = Math.min(...justNumbers)
+    const smallestPrice = Math.min(...justNumbers) // use ... before the array to read through the list of numbers, otherwise it would need values
     const smallestPriceIndex = justNumbers.indexOf(smallestPrice)
     const specificRemoveButton = this.basketItemRemoveButton.nth(smallestPriceIndex)
     await specificRemoveButton.waitFor()
