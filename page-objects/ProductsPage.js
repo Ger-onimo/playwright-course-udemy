@@ -11,9 +11,9 @@ import { isDeskTopViewport } from "../utils/isDesktopViewport.js"
 // }
 
 export class ProductsPage {
-  constructor (page) {
+  constructor(page) {
     this.page = page
-// page locators added to the constructor
+    // page locators added to the constructor
     this.addButtons = page.locator('[data-qa="product-button"]')
     this.sortDropdown = page.locator('[data-qa="sort-dropdown"]')
     this.productTitle = page.locator('[data-qa="product-title"]')
@@ -36,9 +36,9 @@ export class ProductsPage {
     expect(productTitleAfterSorting).not.toEqual(productTitleBeforeSorting)
   }
 
-// Method to add products to the basket
-// add products to the basket at the nth position in the index - iterates through 
-// each addProductToBasket item on the new_user_full_journey.spec.js test
+  // Method to add products to the basket
+  // add products to the basket at the nth position in the index - iterates through 
+  // each addProductToBasket item on the new_user_full_journey.spec.js test
   addProductToBasket = async (index) => {
     const specificAddButton = this.addButtons.nth(index)
     // move this into the constructor: const addButtons = this.page.locator('[data-qa="product-button"]')
@@ -52,7 +52,7 @@ export class ProductsPage {
     // Only on Desktop viewport - This next line for get BasketCount is now in an if condition set to false
     // isDeskTopViewport function now moved to the utils folder
     if (isDeskTopViewport(this.page)) {
-      basketCountBeforeAdding = await navigation.getBasketCount() 
+      basketCountBeforeAdding = await navigation.getBasketCount()
     }
     await specificAddButton.click()
     await expect(specificAddButton).toHaveText("Remove from Basket")
@@ -60,14 +60,20 @@ export class ProductsPage {
     // Only on Desktop viewport - These next 2 lines for get BasketCount are now in an if condition set to false
     if (isDeskTopViewport(this.page)) {
       const basketCountAfterAdding = await navigation.getBasketCount()
-      expect (basketCountAfterAdding).toBeGreaterThan(basketCountBeforeAdding)
-      }
-
-  // await this.page.pause()
+      expect(basketCountAfterAdding).toBeGreaterThan(basketCountBeforeAdding)
+    }
   }
-<<<<<<< HEAD
-}
-=======
 
+  sortByCheapest = async () => {
+    await this.sortDropdown.waitFor()
+    // get the order of the products before ordering
+    await this.productTitle.first().waitFor()
+    const productTitlesBeforeSorting = await this.productTitle.allInnerTexts()
+    await this.sortDropdown.selectOption("price-asc")
+    // get the order of the products after ordering
+    const productTitlesAfterSorting = await this.productTitle.allInnerTexts()
+    // expect these lists orders to be different
+    expect(productTitlesAfterSorting).not.toEqual(productTitlesBeforeSorting)
+    // await this.page.pause()
+  }
 }
->>>>>>> main
