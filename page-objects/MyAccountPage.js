@@ -6,7 +6,7 @@ export class MyAccountPage {
 
     visit = async () => {
         await this.page.goto("/my-account")
-        await this.page.pause()
+        // await this.page.pause()
     }
 
 }
