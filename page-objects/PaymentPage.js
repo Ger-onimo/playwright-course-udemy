@@ -1,5 +1,5 @@
 import { expect } from "@playwright/test"
-import { paymentDetails } from "../data/paymentDetails"
+import { paymentDetails } from "../data/paymentDetails.js"
 
 export class PaymentPage {
     constructor(page) {
