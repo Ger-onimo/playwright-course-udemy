@@ -1,14 +1,14 @@
 //  Import the dependency that translates JSON to JS
 import * as nodeFetch from "node-fetch"
 
-export const getLoginToken = async () => {
+export const getLoginToken = async (username, password) => {
     // Store token, method & payload in "reponse" 
     const response = await nodeFetch("http://localhost:2221/api/login", {
         // From Network > Headers > Request Method
         method: "POST",
         // From Network > Payload
         // Use JSON.stringify to convert body to a string
-        body: JSON.stringify({ username: "admin", password: "Admin123" })
+        body: JSON.stringify({ "username": username, "password": password })
     })
     // Error handling if call not worked
     if (response.status !== 200) {
