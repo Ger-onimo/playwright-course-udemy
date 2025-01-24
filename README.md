@@ -51,15 +51,17 @@ VISUAL STUDIO CODE:
 
 - Download VS code: https://code.visualstudio.com/download
 
-Command to run a test:
+Commands to run a test:
 
 > npm run test - or - npm test
+> npm run ui
+(runs a browser ui mode)
 
 Quit command:
 
 > ctrl c
 
-Casing examples:
+Casing standards:
 
 - Folders > Lowercase, hyphen between each word
 - page-objects folder files/classes > Pascal Case e.g. ProductPage.js
@@ -67,9 +69,14 @@ Casing examples:
 - methods and variables > Camel Case > e.g. productPage
 
 UNIQUE EMAILS & PASSWORDS
-Add UUID generator to generate unique IDs for email addresses and passwords:
+To create these, add UUID generator to generate unique IDs to pass in to email addresses and passwords:
 
 - https://www.npmjs.com/package/uuid
 - Note the command as npm install uuid. In practise use:
   > npm install --save uuid
 - The course uses a specific/fixed version, so adds in @9.0.0 - probs use latest on new projects.
+
+TESTS THAT WILL RUN ON COMMAND
+- new_user_full_journey.spec.js the only test set to run - indicate by test.only
+- To run other tests:
+  > remove or add ".only" or ".skip" to each test file as required.
