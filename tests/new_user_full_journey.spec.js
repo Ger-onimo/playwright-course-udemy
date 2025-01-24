@@ -11,7 +11,7 @@ import { PaymentPage } from "../page-objects/PaymentPage.js"
 import { paymentDetails } from "../data/paymentDetails.js"
 
 
-test("New user full end-to-end test journey", async ({ page }) => {
+test.only("New user full end-to-end test journey", async ({ page }) => {
   const productsPage = new ProductsPage(page)
   // goto the products page url
   // Calls the ProductsPage class and visit method
