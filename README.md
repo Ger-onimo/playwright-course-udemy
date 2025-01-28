@@ -1,4 +1,4 @@
-# udemy_awt_js_pw
+# playwright-course-udemy
 CAVEAT:
 - THIS IS A LEARNING REPO, THEREFORE, EVERYTHING SEEN HERE WAS CREATED AS A STEP-BY-STEP CODE ALONG WITH THE UDEMY COURSE (linked below).
 - THE COURSE CONTENT CREATOR DEVELOPED THE WEBSITE.
@@ -15,8 +15,8 @@ COMMENTS:
 - THE COMMENTS CONTAINED WITHIN THE CODE PAGES ARE FOR MY OWN REFERENCE WHILE LEARNING, SO NOT A REFLECTION ON A REAL LIFE SITUATION WHERE THESE WOULD BE TIDIED UP.
 -------
 
-UDEMY COURSE:
-Automated Web Testing with JavaScript and Playwright: https://www.udemy.com/course/automated-web-testing/learn/lecture/35748862#questions/19203146
+UDEMY COURSE - Automated Web Testing with JavaScript and Playwright:
+https://www.udemy.com/course/automated-web-testing/learn/lecture/35748862#questions/19203146
 
 
 RESOURCES
