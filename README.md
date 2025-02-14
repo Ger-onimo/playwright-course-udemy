@@ -31,11 +31,13 @@ The Shopping Store Website runs from the following file:
   - to run from the terminal (use mac terminal) for zsh (the shell I use), follow this instruction:
     "Once your script is saved, you will need to make it executable by running the command “chmod +x [scriptname]” in the terminal. To run the script, you can use the terminal command “./[scriptname]”"
 
-
-
   - PERSONAL mac - M3 chip:
     > chmod +x shopping-store-mac-amd64
-    > ~ /Users/gerrywaterston/Learning/Playwright/Udemy-Playwright/code/udemy_awt_js_pw/./shopping-store-mac-arm64
+    > ~ /Users/gerrywaterston/Learning/Playwright/Udemy-Playwright/code-repo/playwright-course-udemy/./shopping-store-mac-arm64
+
+RUN
+ - Once all the chmod sorted, run the file from wherever it's stored - I've put the file in the project folder,
+   so I just run: ./shopping-store-mac-arm64
 
 WEBSITE URL:
 
