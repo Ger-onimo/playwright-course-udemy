@@ -1,5 +1,5 @@
 # name of the pipeleine
-name: Plawright Tests
+name: Playwright Tests
 # when it runs...
 on: 
 # every git push on the named branch GitHub actions pipeline will run it
