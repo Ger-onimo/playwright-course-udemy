@@ -10,6 +10,11 @@ jobs:
   playwrighttests:
 # which operating system to run on...
     runs-on: ubuntu-latest # using Linux as commonly used in programming
+# docker container
+    container:
+      image: mcr.microsoft.com/playwright:v1.50.1-focal
+      env:
+        ADMIN_PASSWORD: ${{ secrets.ADMIN_PASWORD }}
 # action steps
     steps:
 #  name of step 1
@@ -17,5 +22,12 @@ jobs:
 # declares which github action to use
         uses: actions/checkout@v2
 #  name of step 2
-      - name: Say hello
-        run: echo Hello
+      - name: Run test
+        run: |
+          echo "Start the shoping store application"
+          chmod+x ./shopping-store-linux-arm64
+          ./shopping-store-linux-arm64 &
+          echo "Install dependencies from lockfile"
+          npm ci
+          echo "Run playwright tests"
+          npm run test:ci
