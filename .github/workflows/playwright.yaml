@@ -14,8 +14,8 @@ jobs:
     steps:
 #  name of step 1
       - name: Checkout repository
-# declares hwich github action to use
-        uses: action/checkout@v2
+# declares which github action to use
+        uses: actions/checkout@v2
 #  name of step 2
       - name: Say hello
         run: echo Hello
