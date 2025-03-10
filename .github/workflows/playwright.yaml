@@ -1,0 +1,21 @@
+# name of the pipeleine
+name: Plawright Tests
+# when it runs...
+on: 
+# every git push on the named branch GitHub actions pipeline will run it
+  push: 
+    branch: [ section-4-ci-systems ]
+# runs "jobs"
+jobs:
+  playwrighttests:
+# which operating system to run on...
+    runs-on: ubuntu-latest # using Linux as commonly used in programming
+# action steps
+    steps:
+#  name of step 1
+      - name: Checkout repository
+# declares hwich github action to use
+        uses: action/checkout@v2
+#  name of step 2
+      - name: Say hello
+        run: echo Hello
