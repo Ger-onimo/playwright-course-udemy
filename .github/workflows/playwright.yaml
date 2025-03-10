@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest # using Linux as commonly used in programming
 # docker container
     container:
-      image: mcr.microsoft.com/playwright:v1.50.1-focal
+      image: mcr.microsoft.com/playwright:v1.50.1-noble
       env:
         ADMIN_PASSWORD: ${{ secrets.ADMIN_PASWORD }}
 # action steps
