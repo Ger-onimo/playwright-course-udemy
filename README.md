@@ -48,7 +48,8 @@ NODE:
 > Download latest node.js from: https://nodejs.org/en
 
 - Choose the LTS option
-- Do an npm install too if the node_modules folder isn't visible
+- Do an npm install too if the node_modules folder isn't visible:
+  > npm install
 
 VISUAL STUDIO CODE:
 
