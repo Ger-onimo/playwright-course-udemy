@@ -4,7 +4,7 @@ name: Playwright Tests
 on: 
 # every git push on the named branch GitHub actions pipeline will run it
   push: 
-    branch: [ main ]
+    branch: [ section-4-ci-systems ]
 # runs "jobs"
 jobs:
   playwrighttests:
